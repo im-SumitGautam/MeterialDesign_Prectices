@@ -6,15 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".AddCategory">
 
-    <include
-        layout="@layout/toolbar"
-        android:id="@+id/cat_toolbar"
-        android:layout_alignParentTop="true"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/home_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/dark_blue"
+        app:popupTheme="@style/MyToolbarStyle"
+        app:subtitleTextColor="@color/white"
+        app:titleTextColor="@color/white">
+    </androidx.appcompat.widget.Toolbar>
 
     <FrameLayout
-        android:layout_below="@+id/cat_toolbar"
+        android:layout_below="@+id/home_toolbar"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@color/dark_blue"

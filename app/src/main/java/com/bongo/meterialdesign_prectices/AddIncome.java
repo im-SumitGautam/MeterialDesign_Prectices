@@ -31,12 +31,27 @@ public class AddIncome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_income);
 
-
-
-
         MaterialTextView selectDateTxt = (MaterialTextView) findViewById(R.id.date_txt);
         ImageView dateImg = (ImageView) findViewById(R.id.calender_img);
         FrameLayout layout = (FrameLayout) findViewById(R.id.date_frame);
+
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.home_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Income");
+
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.baseline_keyboard_backspace_24));
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
 
 
         dateImg.setOnClickListener(new View.OnClickListener() {

@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.home_toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Hii!");
+        getSupportActionBar().setTitle("Track");
 
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.baseline_keyboard_backspace_24));
 
@@ -90,6 +90,19 @@ public class HomeActivity extends AppCompatActivity {
                         intent = new Intent(HomeActivity.this,AddCategory.class);
                         startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
                         break;
+                    case 3:
+                        intent = new Intent(HomeActivity.this,ReportGraph.class);
+                        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
+                        break;
+                    case 4:
+                        intent = new Intent(HomeActivity.this,BalanceActivity.class);
+                        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
+                        break;
+                    case 5:
+                        intent = new Intent(HomeActivity.this,CalenderActivity.class);
+                        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
+                        break;
+
                 }
             }
         });

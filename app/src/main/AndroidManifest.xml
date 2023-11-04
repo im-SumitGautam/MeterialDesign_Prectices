@@ -13,6 +13,15 @@
         android:theme="@style/Theme.MeterialDesign_Prectices"
         tools:targetApi="31">
         <activity
+            android:name=".BalanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CalenderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReportGraph"
+            android:exported="false" />
+        <activity
             android:name=".AddCategory"
             android:exported="false" />
         <activity
@@ -20,17 +29,15 @@
             android:exported="false" />
         <activity
             android:name=".AddIncome"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".Sign_Up"
-            android:theme="@style/Theme.MaterialComponents.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.MaterialComponents.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
