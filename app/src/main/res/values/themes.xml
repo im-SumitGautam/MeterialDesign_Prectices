@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MeterialDesign_Prectices" parent="Theme.Material3.DayNight">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimaryDark">@color/darker_blue</item>
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="android:navigationBarColor">@color/dark_blue</item>
+    </style>
+
+    <style name="Theme.MeterialDesign_Prectices" parent="Base.Theme.MeterialDesign_Prectices" />
+
+
+    <style name="MeterialDesign_StatusBar">
+        <item name="android:statusBarColor">
+            @android:color/transparent
+        </item>
+    </style>
+
+    <style name="MyToolbarStyle" parent="ThemeOverlay.Material3.Toolbar.Surface">
+        <item name="android:colorBackground">@color/blue_lighter</item>
+        <item name="android:textColor">@color/darker_blue</item>
+    </style>
+</resources>
+

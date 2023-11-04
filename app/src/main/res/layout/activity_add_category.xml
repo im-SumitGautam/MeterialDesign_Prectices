@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCategory">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/cat_toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_below="@+id/cat_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/dark_blue"
+        android:id="@+id/frame_cat">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Category"
+            android:textColor="@color/blueLight"
+            android:textSize="20sp"/>
+
+    </FrameLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/income_txt"
+        android:layout_below="@id/frame_cat"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Income Category"
+        android:textSize="17sp"
+        android:textColor="@color/darker_blue"
+        android:layout_marginStart="15dp"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/income_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/income_txt"
+        android:layout_margin="15dp"
+        android:hint="Income category"
+        app:boxStrokeColor="@color/dark_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_income_cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_income_btn"
+        android:layout_below="@+id/income_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/blue"
+        android:text="Add Income"
+        android:textColor="@color/blueLight"/>
+
+
+
+ <View
+     android:id="@+id/view"
+     android:layout_width="match_parent"
+     android:layout_height="2dp"
+     android:background="@color/blue"
+     android:layout_marginTop="25dp"
+     android:layout_marginStart="15dp"
+     android:layout_marginEnd="15dp"
+     android:layout_below="@+id/add_income_btn"/>
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/expense_txt"
+        android:layout_below="@id/view"
+        android:layout_marginTop="26dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expense Category"
+        android:textSize="17sp"
+        android:textColor="@color/darker_blue"
+        android:layout_marginStart="15dp"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/expense_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/expense_txt"
+        android:layout_margin="15dp"
+        android:hint="Expense category"
+        app:boxStrokeColor="@color/dark_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_expense_cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_expense_btn"
+        android:layout_below="@+id/expense_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/blue"
+        android:text="Add Expense"
+        android:textColor="@color/blueLight"/>
+
+</RelativeLayout>
