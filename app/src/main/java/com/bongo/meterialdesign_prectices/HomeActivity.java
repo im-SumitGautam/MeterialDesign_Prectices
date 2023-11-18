@@ -1,7 +1,9 @@
 package com.bongo.meterialdesign_prectices;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -22,6 +24,8 @@ import java.util.ArrayList;
 public class HomeActivity extends AppCompatActivity {
 
     ArrayList<HomeItems> list = new ArrayList<>();
+    CardView addIncome, addExpense, addCategory, report, balance, calender;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,54 +63,104 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        addIncome = findViewById(R.id.layout_add_income);
+        addExpense = findViewById(R.id.layout_add_expense);
+        addCategory = findViewById(R.id.layout_add_category);
+        report = findViewById(R.id.layout_report);
+        balance = findViewById(R.id.layout_balance);
+        calender = findViewById(R.id.layout_default_month);
 
-        //GridView
-        GridView simpleList = (GridView) findViewById(R.id.gridView);
-        list.add(new HomeItems("Add Income",R.drawable.addincome));
-        list.add(new HomeItems("Add Expense",R.drawable.addexpenditure));
-        list.add(new HomeItems("Add Category",R.drawable.addcategory));
-        list.add(new HomeItems("Reports",R.drawable.reports));
-        list.add(new HomeItems("Balance",R.drawable.rupees));
-        list.add(new HomeItems("Default Month",R.drawable.calendarr));
-        GridViewAdapter myAdapter=new GridViewAdapter(this,list);
-        simpleList.setAdapter(myAdapter);
-
-        simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        addIncome.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                Intent intent;
-
-                switch (position) {
-                    case 0:
-                       intent = new Intent(HomeActivity.this,AddIncome.class);
-                        startActivity(intent,ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
-                        break;
-                    case 1:
-                        intent = new Intent(HomeActivity.this,AddExpense.class);
-                        startActivity(intent,ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
-                        break;
-                    case 2:
-                        intent = new Intent(HomeActivity.this,AddCategory.class);
-                        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
-                        break;
-                    case 3:
-                        intent = new Intent(HomeActivity.this,ReportGraph.class);
-                        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
-                        break;
-                    case 4:
-                        intent = new Intent(HomeActivity.this,BalanceActivity.class);
-                        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
-                        break;
-                    case 5:
-                        intent = new Intent(HomeActivity.this,CalenderActivity.class);
-                        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
-                        break;
-
-                }
+            public void onClick(View v) {
+                intent = new Intent(HomeActivity.this,AddIncome.class);
+                startActivity(intent,ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
             }
         });
 
+        addExpense.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(HomeActivity.this,AddExpense.class);
+                startActivity(intent,ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
+            }
+        });
+
+        addCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(HomeActivity.this,AddCategory.class);
+                startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
+            }
+        });
+
+        report.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(HomeActivity.this,ReportGraph.class);
+                startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
+            }
+        });
+
+        balance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(HomeActivity.this,BalanceActivity.class);
+                startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
+            }
+        });
+
+        calender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(HomeActivity.this,CalenderActivity.class);
+                startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(HomeActivity.this).toBundle());
+            }
+        });
+
+
+//
+//        //GridView
+//        GridView simpleList = (GridView) findViewById(R.id.gridView);
+//        list.add(new HomeItems("Add Income",R.drawable.addincome));
+//        list.add(new HomeItems("Add Expense",R.drawable.addexpenditure));
+//        list.add(new HomeItems("Add Category",R.drawable.addcategory));
+//        list.add(new HomeItems("Reports",R.drawable.reports));
+//        list.add(new HomeItems("Balance",R.drawable.rupees));
+//        list.add(new HomeItems("Default Month",R.drawable.calendarr));
+//        GridViewAdapter myAdapter=new GridViewAdapter(this,list);
+//        simpleList.setAdapter(myAdapter);
+//
+//        simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//
+//                ;
+//
+//                switch (position) {
+//                    case 0:
+//
+//                        break;
+//                    case 1:
+//
+//                        break;
+//                    case 2:
+//
+//                        break;
+//                    case 3:
+//
+//                        break;
+//                    case 4:
+//
+//                        break;
+//                    case 5:
+//
+//                        break;
+//
+//                }
+//            }
+//        });
+//
 
     }
 
